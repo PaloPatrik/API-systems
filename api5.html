@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koira</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Koira</h1>
+    <div>
+      <label for="dog-breed">Valitse koira:</label>
+      <select id="dog-breed">
+        <option value="random">Satunnainen</option>
+        <option value="bulldog">Bulldog</option>
+        <option value="labrador">Labrador</option>
+        <option value="poodle">Poodle</option>
+        <option value="beagle">Beagle</option>
+        <option value="retriever">Retriever</option>
+      </select>
+    </div>
+    <button id="get-dog-image">Näytä kuva</button>
+    <div id="dog-image-container">
+      <img id="dog-image" src="" alt="Koiran kuva" style="display: none; max-width: 500px;">
+    </div>
+  </div>
+
+  <script src="api5func.js"></script>
+</body>
+</html>

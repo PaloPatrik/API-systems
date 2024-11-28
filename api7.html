@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Haku</title>
+  <style>
+    .type {
+      padding: 5px;
+      border-radius: 5px;
+      color: white;
+      margin-right: 5px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .type.fire {background-color: red;}
+    .type.water {background-color: blue;}
+    .type.grass {background-color: green;}
+    .type.electric {background-color: yellow;}
+    .type.ground {background-color: brown;}
+    .type.poison {background-color: blueviolet;}
+    .type.fairy {background-color: pink;}
+    .type.normal {background-color: grey;}
+    .type.flying {background-color: cadetblue;}
+    .type.bug {background-color: chartreuse;}
+    .type.fighting {background-color: burlywood;}
+    .type.psychic {background-color: violet;}
+  </style>
+</head>
+<body>
+
+  <h1>Pokemon Haku</h1>
+
+  <input type="text" id="search" placeholder="Syötä Pokémonin nimi tai Pokedex-numero">
+  <button onclick="fetchPokemon()">Hae Pokémon</button>
+ 
+  <div id="pokemon-details" class="pokemon-card" style="display:none;">
+    <h2 id="pokemon-name"></h2>
+    <p>Pokedex nro: <span id="pokedex-number"></span></p>
+    <div id="types"></div>
+    <p><strong>Paino:</strong> <span id="weight"></span> kg</p>
+    <p><strong>Korkeus:</strong> <span id="height"></span> m</p>
+    
+    <h3>Statsit:</h3>
+    <ul id="stats"></ul>
+    
+    <h3>Abilityt:</h3>
+    <ul id="abilities"></ul>
+    
+    <h3>Ääni:</h3>
+    <button id="sound-button" class="button">Kuuntele Pokémonin huuto</button>
+    
+    <div>
+      <button id="prev-button" class="button" onclick="fetchAdjacentPokemon('prev')">Edellinen Pokémon</button>
+      <button id="next-button" class="button" onclick="fetchAdjacentPokemon('next')">Seuraava Pokémon</button>
+    </div>
+    
+    <div>
+      <h3>Shiny-muoto</h3>
+      <img id="shiny-img" src="" alt="Shiny Pokémon">
+    </div>
+  </div>
+  <script src="api7func.js"></script>
+  </body>
