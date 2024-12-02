@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+</head>
+<body>
+    <header>
+        <h1>Anime Haku</h1>
+        <input type="text" id="animeSearch" placeholder="Hae animesarjaa..." oninput="searchAnime()">
+    </header>
+
+    <div id="airing-anime-container"></div>
+
+    <div>
+        <label for="type">Tyyppi:</label>
+        <select id="type">
+            <option value="">Valitse tyyppi</option>
+            <option value="tv">TV</option>
+            <option value="movie">Movie</option>
+            <option value="ova">OVA</option>
+            <option value="special">Special</option>
+            <option value="ona">ONA</option>
+            <option value="music">Music</option>
+            <option value="cm">CM</option>
+            <option value="pv">PV</option>
+            <option value="tv_special">TV Special</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="status">Status:</label>
+        <select id="status">
+            <option value="">Valitse status</option>
+            <option value="airing">Airing</option>
+            <option value="complete">Complete</option>
+            <option value="upcoming">Upcoming</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="rating">Ikäraja:</label>
+        <select id="rating">
+            <option value="">Valitse ikäraja</option>
+            <option value="g">G</option>
+            <option value="pg">PG</option>
+            <option value="pg13">PG13</option>
+            <option value="r17">R17</option>
+            <option value="r">R</option>
+            <option value="rx">RX</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="minScore">Min score:</label>
+        <input type="number" id="minScore" min="0" max="10">
+        <label for="maxScore">Max score:</label>
+        <input type="number" id="maxScore" min="0" max="10">
+    </div>
+
+
+    <div id="searchResults"></div>
+
+
+    <button onclick="randomAnime()">Näytä satunnainen anime</button>
+
+    <script src="api9func.js"></script>
+</body>
+</html>
